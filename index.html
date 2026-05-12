@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Restoran - Sesli Menü</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="stylesheet" href="internal/style.css">
+</head>
+<body>
+
+  <div class="ocean-container">
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" />
+        <use xlink:href="#gentle-wave" x="48" y="3" />
+        <use xlink:href="#gentle-wave" x="48" y="5" /> 
+      </g>
+    </svg>
+
+    <div class="surface-item i1">🥐</div> 
+    <div class="surface-item i2">🍩</div> 
+    <div class="surface-item i3">🍰</div> 
+    <div class="surface-item i4">☕</div> 
+    <div class="surface-item i5">🍪</div> 
+    <div class="surface-item i6">🥪</div> 
+  </div>
+
+  <main class="card" role="main" aria-labelledby="pageTitle">
+    <h1 id="pageTitle">☕ Sesli Menü</h1>
+    <p class="lead" id="intro">
+      Görme engelli dostu sesli menü sistemi.
+    </p>
+
+    <button id="speakBtn" class="bigbtn">🔊 Menüyü Oku</button>
+    
+    <div id="status" class="status" aria-live="polite">Hazırlanıyor...</div>
+    <div id="liveAnnounce" class="sr-only" aria-live="assertive"></div>
+
+    <hr>
+
+    <section id="content">
+      <p style="text-align:center; font-size: 1.2em; color: var(--text-light); margin-bottom: 20px;">
+        Masa No: <strong style="color: var(--text-main); font-size: 1.3em;">
+        <span id="tableId">—</span></strong>
+      </p>
+      
+      <ul id="kategori">
+
+        <li><ins><strong><span class="emoji">☕</span> Kahveler</strong></ins>
+          <ul>
+              <li><span class="item-name">Espresso</span> <span class="price-tag">120₺</span></li>
+              <li><span class="item-name">Latte</span> <span class="price-tag">125₺</span></li>
+              <li><span class="item-name">Cappuccino</span> <span class="price-tag">135₺</span></li>
+              <li><span class="item-name">Mocha</span> <span class="price-tag">150₺</span></li>
+              <li><span class="item-name">Türk Kahvesi</span> <span class="price-tag">110₺</span></li>
+              <li><span class="item-name">Filtre Kahve</span> <span class="price-tag">115₺</span></li>
+          </ul>
+        </li>
+
+        <li><ins><strong><span class="emoji">🍵</span> Çaylar</strong></ins>
+          <ul>
+            <li><span class="item-name">Demleme Çay</span> <span class="price-tag">75₺</span></li>
+            <li><span class="item-name">Bitki Çayları</span> <span class="price-tag">85₺</span></li>
+            <li><span class="item-name">Kış Çayı</span> <span class="price-tag">95₺</span></li>
+          </ul>
+        </li>
+
+        <li><ins><strong><span class="emoji">🥤</span> Soğuk İçecekler</strong></ins>
+          <ul>
+            <li><span class="item-name">Limonata</span> <span class="price-tag">110₺</span></li>
+            <li><span class="item-name">Soğuk Çay</span> <span class="price-tag">100₺</span></li>
+            <li><span class="item-name">Taze Portakal Suyu</span> <span class="price-tag">130₺</span></li>
+            <li><span class="item-name">Ayran</span> <span class="price-tag">60₺</span></li>
+            <li><span class="item-name">Su</span> <span class="price-tag">40₺</span></li>
+            <li><span class="item-name">Maden Suyu</span> <span class="price-tag">50₺</span></li>
+          </ul>
+        </li>
+
+        <li><ins><strong><span class="emoji">🍦</span> Milkshake & Frozen</strong></ins>
+          <ul>
+            <li><span class="item-name">Çilekli Milkshake</span> <span class="price-tag">160₺</span></li>
+            <li><span class="item-name">Çikolatalı Milkshake</span> <span class="price-tag">160₺</span></li>
+            <li><span class="item-name">Oreo Milkshake</span> <span class="price-tag">170₺</span></li>
+            <li><span class="item-name">Karpuz Frozen</span> <span class="price-tag">150₺</span></li>
+          </ul>
+        </li>
+
+        <li><ins><strong><span class="emoji">🍰</span> Tatlılar</strong></ins>
+          <ul>
+            <li><span class="item-name">San Sebastian</span> <span class="price-tag">180₺</span></li>
+            <li><span class="item-name">Tiramisu</span> <span class="price-tag">170₺</span></li>
+            <li><span class="item-name">Sufle</span> <span class="price-tag">190₺</span></li>
+            <li><span class="item-name">Magnolia</span> <span class="price-tag">150₺</span></li>
+            <li><span class="item-name">Waffle</span> <span class="price-tag">200₺</span></li>
+            <li><span class="item-name">Brownie</span> <span class="price-tag">160₺</span></li>
+          </ul>
+        </li>
+
+        <li><ins><strong><span class="emoji">🥪</span> Atıştırmalıklar</strong></ins>
+          <ul>
+            <li><span class="item-name">Kaşarlı Tost</span> <span class="price-tag">125₺</span></li>
+            <li><span class="item-name">Karışık Tost</span> <span class="price-tag">140₺</span></li>
+            <li><span class="item-name">Club Sandviç</span> <span class="price-tag">160₺</span></li>
+            <li><span class="item-name">Patates Kızartması</span> <span class="price-tag">100₺</span></li>
+            <li><span class="item-name">Sigara Böreği</span> <span class="price-tag">120₺</span></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </section>
+  </main>
+
+  <script src="internal/script.js"></script>
+</body>
+</html>
